@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bbj.lease.web.admin.mapper.FeeKeyMapper">
+
+<!--    <resultMap id="FeeInfoList" type="fee.vo.admin.web.com.bbj.lease.FeeKeyVo">-->
+<!--        <id property="id" column="id"/>-->
+<!--        <result property="name" column="key_name"/>-->
+<!--        <collection property="feeValueList" ofType="entity.com.bbj.lease.model.FeeValue">-->
+<!--            <id column="value_id" property="id"/>-->
+<!--            <result column="value_name" property="name"/>-->
+<!--            <result column="value_unit" property="unit"/>-->
+<!--            <result column="key_id" property="feeKeyId"/>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
+<!--    结果集封装-->
+    <resultMap id="FeeInfoList" type="com.bbj.lease.web.admin.vo.fee.FeeKeyVo" autoMapping="true">
+        <id property="id" column="id"/>
+<!--        //property就是类中的属性-->
+        <collection property="feeValueList" ofType="com.bbj.lease.model.entity.FeeValue">
+<!--  结果接里面的列表的项       FeeValue ID，name, unit,外键 key_id -->
+            <id column="value_id" property="id"/>
+            <result column="value_name" property="name"/>
+            <result column="value_unit" property="unit"/>
+            <result column="key_id" property="feeKeyId"/>
+  </collection>
+
+    </resultMap>
+
+    <select id="listFeeInfo" resultMap="FeeInfoList">
+--         select k.id,
+--                k.name       name,
+--                v.id         value_id,
+--                v.name       value_name,
+--                v.unit       value_unit,
+--                v.fee_key_id key_id
+--         from fee_key k
+--                  left join fee_value v on k.id = v.fee_key_id and v.is_deleted = 0
+--         where k.is_deleted = 0
+
+select k.id,
+       k.name       name,
+       v.id         value_id,
+       v.name       value_name,
+       v.unit       value_unit,
+       v.fee_key_id key_id
+from fee_key k
+         left join fee_value v on k.id = v.fee_key_id and v.is_deleted = 0
+where k.is_deleted = 0
+    </select>
+</mapper>

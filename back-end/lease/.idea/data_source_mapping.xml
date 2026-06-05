@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/web/web-admin/src/main/resources/mapper/FeeValueMapper.xml" value="551103d1-3bac-44c2-8eb4-463221dbccc4" />
+    <file url="file://$PROJECT_DIR$/web/web-admin/src/main/resources/mapper/GraphInfoMapper.xml" value="551103d1-3bac-44c2-8eb4-463221dbccc4" />
+    <file url="file://$PROJECT_DIR$/web/web-admin/src/main/resources/mapper/LabelInfoMapper.xml" value="551103d1-3bac-44c2-8eb4-463221dbccc4" />
+    <file url="file://$PROJECT_DIR$/web/web-admin/src/main/resources/mapper/LeaseAgreementMapper.xml" value="551103d1-3bac-44c2-8eb4-463221dbccc4" />
+    <file url="file://$PROJECT_DIR$/web/web-admin/src/main/resources/mapper/ViewAppointmentMapper.xml" value="551103d1-3bac-44c2-8eb4-463221dbccc4" />
+  </component>
+</project>
