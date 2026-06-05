@@ -34,13 +34,11 @@
 
 - **租赁管理**
   - 租赁合同创建和管理
-  - 租金账单生成和追踪
   - 租赁期限管理
 
 - **用户管理**
   - 用户账户管理
   - 权限分配和控制
-  - 用户数据查询和统计
 
 ### 移动端应用
 - 公寓房源浏览
@@ -143,20 +141,6 @@ npm run dev
 npm run build:prod
 ```
 
-#### 移动端应用
-
-```bash
-cd front-end/rentHouseMobile
-
-# 安装依赖
-npm install
-
-# 开发模式运行
-npm run dev
-
-# 生产环境构建
-npm run build
-```
 
 ---
 
@@ -179,8 +163,6 @@ npm run build
 - **Vue Router 4** - 路由管理
 - **Axios** - HTTP 请求库
 
-### 前端移动端应用技术
-- 根据项目实际使用的框架配置
 
 ### 开发工具
 - IDE：IntelliJ IDEA / Eclipse / VSCode
@@ -254,7 +236,6 @@ Response: 204 No Content
 - JWT 令牌认证
 - 请求参数验证
 - SQL 注入防护
-- CORS 配置
 - 用户权限控制
 
 ---
